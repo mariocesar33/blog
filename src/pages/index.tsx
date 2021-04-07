@@ -2,6 +2,7 @@ import { GetStaticProps } from 'next';
 
 import Head from 'next/head';
 import Link from 'next/link';
+import Prismic from '@prismicio/client';
 import { FiCalendar } from 'react-icons/fi';
 import { FiUser } from 'react-icons/fi';
 import { getPrismicClient } from '../services/prismic';
@@ -95,9 +96,19 @@ export default function Home() {
   );
 }
 
-// export const getStaticProps = async () => {
-//   // const prismic = getPrismicClient();
-//   // const postsResponse = await prismic.query(TODO);
+export const getStaticProps: GetStaticProps = async () => {
+  const prismic = getPrismicClient();
+  const postsResponse = await prismic.query(
+    [Prismic.predicates.at('document.type', 'posts')],
+    {
+      pageSize: 1,
+    }
+  );
+  console.log(postsResponse);
 
-//   // TODO
-// };
+  return {
+    props: {
+      postsResponse,
+    },
+  };
+};
