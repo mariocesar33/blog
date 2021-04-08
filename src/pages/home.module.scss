@@ -1,5 +1,5 @@
 .postsList {
-  max-width: 720px;
+  max-width: 800px;
   margin: 5rem 0;
 
   > a {
@@ -49,12 +49,15 @@
       }
     }
   }
+
+  button {
+    margin-top: 2rem;
+    background: transparent;
+    border: 0;
+    font-weight: 600;
+    font-size: 1.125rem;
+    color: var(--highlight);
+  }
 }
 
-.more {
-  background: transparent;
-  border: 0;
-  font-weight: 600;
-  font-size: 1.125rem;
-  color: var(--highlight);
-}
+
