@@ -13,3 +13,6 @@ Usando Fetch -> https://developer.mozilla.org/pt-BR/docs/Web/API/Fetch_API/Using
 
 
 Modern javascript Date Utility Library -> https://date-fns.org/docs/Getting-Started
+
+
+Basic Features: Data Feching | Next.js -> https://nextjs.org/docs/basic-features/data-fetching#fallback-pages
